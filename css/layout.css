@@ -1,0 +1,8 @@
+.main-content {
+    transition: margin-right 0.3s ease;
+    margin-right: 0;
+}
+
+.sidebar-visible .main-content {
+    margin-right: 220px; /* Ajusta este valor según el ancho de la barra lateral */
+}

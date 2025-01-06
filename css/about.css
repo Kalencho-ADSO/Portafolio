@@ -1,0 +1,43 @@
+/* About me container */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Divisiones de los elementos */
+.description,
+.skills {
+    flex: 1;
+    max-width: 45%; /* Aquí puedes ajustar el porcentaje para cambiar el tamaño de las secciones */
+}
+
+/* Tabla de habilidades */
+.skills table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.skills th, .skills td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.skills th {
+    background-color: #f4f4f4;
+}
+
+/* Centrado del contenido */
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+section#about {
+    max-width: 960px; /* Puedes ajustar este tamaño para que se ajuste a tu pantalla */
+    width: 100%;
+}
