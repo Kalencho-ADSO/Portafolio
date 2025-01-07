@@ -1,43 +1,93 @@
-/* About me container */
+/* Contenedor principal de la sección 'Sobre mí' */
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+    align-items: flex-start; /* Alinea las columnas en la parte superior */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 40px; /* Espacio interior del contenedor */
+    background-color: #f9f9f9; /* Fondo claro para separación visual */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
 }
 
-/* Divisiones de los elementos */
-.description,
-.skills {
-    flex: 1;
-    max-width: 45%; /* Aquí puedes ajustar el porcentaje para cambiar el tamaño de las secciones */
+/* Columna izquierda que contiene la descripción */
+.left-column {
+    flex: 1; /* Ocupa el mismo espacio que la columna derecha */
+    max-width: 45%; /* Ancho máximo de la columna */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-right: 20px; /* Añade espacio a la derecha para separación */
 }
+
+/* Columna derecha que contiene la card */
+.right-column {
+    flex: 1; /* Ocupa el mismo espacio que la columna izquierda */
+    max-width: 45%; /* Ancho máximo de la columna */
+    padding-left: 0; /* Sin espacio adicional a la izquierda */
+    margin-left: 0; /* Sin margen adicional a la izquierda */
+}
+
 
 /* Tabla de habilidades */
-.skills table {
-    width: 70%;
-    border-collapse: collapse;
-}
-
-.skills th, .skills td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.skills th {
-    background-color: #f4f4f4;
-}
-
-/* Centrado del contenido */
-.main-content {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-section#about {
-    max-width: 960px; /* Puedes ajustar este tamaño para que se ajuste a tu pantalla */
+/* From Uiverse.io by admin8756 */ 
+.card {
     width: 100%;
-}
+    height: 300px;
+    margin: 30px;
+    background: #ecf39e;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #31572c;
+    border-radius: 15px;
+    box-shadow: -20px 20px 0px -5px #31572c;
+  }
+  .card__tags {
+    overflow: auto;
+    height: 80%;
+  }
+  .title {
+    font-weight: 900;
+    font-size: 1.7em;
+  }
+  
+  .tag__name {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.1em;
+    background-color: #31572c;
+    padding: 6px 23px 9px;
+    border-radius: 70em;
+    margin: 8px 6px 8px 0;
+    margin-left: 0px;
+    position: relative;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tag__name::before,
+  .tag__name::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #90a955;
+  }
+  
+  .tag__name::before {
+    left: 7px;
+  }
+  
+  .tag__name::after {
+    right: 7px;
+  }
+  
+  .tag__name:hover {
+    transform: scale(1.1);
+    background-color: #51572c;
+  }
+  
