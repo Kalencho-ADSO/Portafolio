@@ -12,7 +12,7 @@
 }
 
 /* Columna izquierda que contiene la descripción */
-.left-column {
+.about_left_column {
     flex: 1; /* Ocupa el mismo espacio que la columna derecha */
     max-width: 45%; /* Ancho máximo de la columna */
     text-align: left; /* Alinea el texto a la izquierda */
@@ -20,7 +20,7 @@
 }
 
 /* Columna derecha que contiene la card */
-.right-column {
+.about_right_column {
     flex: 1; /* Ocupa el mismo espacio que la columna izquierda */
     max-width: 45%; /* Ancho máximo de la columna */
     padding-left: 0; /* Sin espacio adicional a la izquierda */
@@ -29,7 +29,6 @@
 
 
 /* Tabla de habilidades */
-/* From Uiverse.io by admin8756 */ 
 .card {
     width: 100%;
     height: 300px;
@@ -46,7 +45,7 @@
     overflow: auto;
     height: 80%;
   }
-  .title {
+  .tag_title {
     font-weight: 900;
     font-size: 1.6em;
   }
