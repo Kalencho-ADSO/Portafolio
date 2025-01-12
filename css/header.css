@@ -1,26 +1,26 @@
- /* Header CSS */
- header {
+/* Header CSS */
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente los elementos */
+    align-items: center;
     background: #35424a;
     color: #ffffff;
     height: 100vh;
-    padding: 0 20px; /* Añadir espacio a los lados */
-    background-image: url('../imagenes/rb_413.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
-    background-position: center center; /* Centra la imagen en el header */
+    padding: 0 20px;
+    background-image: url('../imagenes/rb_413.png');
+    background-size: cover;
+    background-position: center center;
 }
 
 .left {
-    max-width: 50%; /* Limita el ancho de la sección izquierda */
+    max-width: 50%;
     text-align: left;
     padding: 20px;
     margin-left: 50px;
 }
 
 .left h1, .left h2, .left h3 {
-    margin: 10px 0; /* Espaciado entre los encabezados */
+    margin: 10px 0;
 }
 
 nav ul {
@@ -54,4 +54,63 @@ nav ul li a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    /* Tablet and small screens */
+    header {
+        flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+        height: auto; /* Ajustar la altura */
+    }
+
+    .left {
+        max-width: 100%; /* La sección izquierda ocupa todo el ancho */
+        margin-left: 0; /* Eliminar el margen izquierdo */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .right .circle {
+        width: 200px; /* Reducción del tamaño del círculo */
+        height: 200px;
+        margin-right: 0; /* Eliminar el margen derecho */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Smartphones y pantallas más pequeñas */
+    header {
+        padding: 20px; /* Aumentar el padding */
+    }
+
+    .left {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .right .circle {
+        width: 150px; /* Asegurarse de que el círculo se ajuste en pantallas pequeñas */
+        height: 150px;
+    }
+
+    nav ul li {
+        display: block; /* Cambiar la disposición de los elementos del menú a columna */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smartphones en orientación vertical */
+    .left h1, .left h2, .left h3 {
+        font-size: 1.2em; /* Reducir el tamaño de fuente */
+    }
+
+    .right .circle {
+        width: 120px; /* Ajustar el tamaño del círculo aún más */
+        height: 120px;
+    }
+
+    nav ul li {
+        font-size: 0.9em; /* Reducir el tamaño de la fuente del menú */
+    }
 }

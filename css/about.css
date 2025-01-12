@@ -1,92 +1,158 @@
 /* Contenedor principal de la sección 'Sobre mí' */
 .about-container {
-    display: flex; /* Utiliza flexbox para alinear elementos */
-    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
-    align-items: flex-start; /* Alinea las columnas en la parte superior */
-    gap: 20px; /* Espacio entre las columnas */
-    padding: 40px; /* Espacio interior del contenedor */
-    background-color: #f9f9f9; /* Fondo claro para separación visual */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+  align-items: flex-start; /* Alinea las columnas en la parte superior */
+  gap: 20px; /* Espacio entre las columnas */
+  padding: 40px; /* Espacio interior del contenedor */
+  background-color: #f9f9f9; /* Fondo claro para separación visual */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
 }
 
 /* Columna izquierda que contiene la descripción */
 .about_left_column {
-    flex: 1; /* Ocupa el mismo espacio que la columna derecha */
-    max-width: 45%; /* Ancho máximo de la columna */
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding-right: 20px; /* Añade espacio a la derecha para separación */
+  flex: 1; /* Ocupa el mismo espacio que la columna derecha */
+  max-width: 45%; /* Ancho máximo de la columna */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-right: 20px; /* Añade espacio a la derecha para separación */
 }
 
 /* Columna derecha que contiene la card */
 .about_right_column {
-    flex: 1; /* Ocupa el mismo espacio que la columna izquierda */
-    max-width: 45%; /* Ancho máximo de la columna */
-    padding-left: 0; /* Sin espacio adicional a la izquierda */
-    margin-left: 0; /* Sin margen adicional a la izquierda */
+  flex: 1; /* Ocupa el mismo espacio que la columna izquierda */
+  max-width: 45%; /* Ancho máximo de la columna */
+  padding-left: 0; /* Sin espacio adicional a la izquierda */
+  margin-left: 0; /* Sin margen adicional a la izquierda */
 }
-
 
 /* Tabla de habilidades */
 .card {
-    width: 100%;
-    height: 300px;
-    margin: 30px;
-    background: #ecf39e;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    color: #31572c;
-    border-radius: 15px;
-    box-shadow: -20px 20px 0px -5px #31572c;
+  width: 100%;
+  height: 300px;
+  margin: 30px;
+  background: #ecf39e;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #31572c;
+  border-radius: 15px;
+  box-shadow: -20px 20px 0px -5px #31572c;
+}
+
+.card__tags {
+  overflow: auto;
+  height: 80%;
+}
+
+.tag_title {
+  font-weight: 900;
+  font-size: 1.6em;
+}
+
+.tag__name {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.1em;
+  background-color: #31572c;
+  padding: 6px 23px 9px;
+  border-radius: 70em;
+  margin: 8px 6px 8px 0;
+  margin-left: 0px;
+  position: relative;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tag__name::before,
+.tag__name::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #90a955;
+}
+
+.tag__name::before {
+  left: 7px;
+}
+
+.tag__name::after {
+  right: 7px;
+}
+
+.tag__name:hover {
+  transform: scale(1.1);
+  background-color: #51572c;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Para pantallas de tamaño medio como tabletas */
+@media (max-width: 1024px) {
+  .about-container {
+      flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+      padding: 20px; /* Reducir el padding */
   }
-  .card__tags {
-    overflow: auto;
-    height: 80%;
+
+  .about_left_column, .about_right_column {
+      max-width: 100%; /* Ambas columnas ocupan el 100% del ancho */
+      text-align: center; /* Centrar el texto en pantallas más pequeñas */
+      margin: 0; /* Eliminar márgenes */
+      padding-right: 0;
   }
-  .tag_title {
-    font-weight: 900;
-    font-size: 1.6em;
+
+  .card {
+      height: auto; /* Ajustar la altura de la card para que no quede fija */
+      margin: 15px 0; /* Añadir un pequeño margen */
   }
-  
+}
+
+/* Para pantallas de smartphones y dispositivos más pequeños */
+@media (max-width: 768px) {
+  .about-container {
+      padding: 15px; /* Reducir aún más el padding */
+  }
+
+  .about_left_column, .about_right_column {
+      max-width: 100%; /* Las columnas ocupan todo el ancho */
+      padding: 0; /* Eliminar padding innecesario */
+      text-align: center; /* Centrar los textos */
+  }
+
+  .card {
+      margin: 10px 0; /* Ajustar el margen de las cards */
+      height: auto; /* Ajustar la altura de las cards */
+  }
+
   .tag__name {
-    display: inline-block;
-    color: #fff;
-    font-size: 1.1em;
-    background-color: #31572c;
-    padding: 6px 23px 9px;
-    border-radius: 70em;
-    margin: 8px 6px 8px 0;
-    margin-left: 0px;
-    position: relative;
-    text-transform: lowercase;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+      font-size: 1em; /* Reducir el tamaño de las etiquetas */
+      padding: 5px 15px; /* Reducir el padding */
   }
-  
-  .tag__name::before,
-  .tag__name::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 40%;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #90a955;
+
+  .tag_title {
+      font-size: 1.4em; /* Reducir el tamaño del título */
   }
-  
-  .tag__name::before {
-    left: 7px;
+}
+
+/* Para dispositivos muy pequeños (smartphones en vertical) */
+@media (max-width: 480px) {
+  .tag__name {
+      font-size: 0.9em; /* Reducir aún más el tamaño de las etiquetas */
+      padding: 4px 10px; /* Reducir el padding */
   }
-  
-  .tag__name::after {
-    right: 7px;
+
+  .tag_title {
+      font-size: 1.2em; /* Reducir el tamaño del título */
   }
-  
-  .tag__name:hover {
-    transform: scale(1.1);
-    background-color: #51572c;
+
+  .card {
+      margin: 10px 0; /* Ajustar el margen */
+      padding: 10px; /* Ajustar padding */
   }
-  
+}

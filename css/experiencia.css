@@ -4,8 +4,8 @@
     font-family: 'Arial, sans-serif';
     padding: 20px;
     background-color: #f4f4f9;
-    
 }
+
 #h1_experienica {
     position: relative; /* Posiciona el h1 con respecto a su contenedor */
     left: 30px; /* Mueve el h1 100px desde la parte izquierda del contenedor */
@@ -25,6 +25,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    gap: 20px;
 }
 
 .exp_left_column,
@@ -40,6 +41,47 @@
     justify-content: center;
 }
 
+/* Media Queries for Responsiveness */
+
+/* Para pantallas medianas como tabletas */
+@media (max-width: 1024px) {
+    .experiencia-container {
+        flex-direction: column; /* Cambia la dirección de las columnas a columna */
+        padding: 10px;
+    }
+
+    .exp_left_column,
+    .exp_right_column {
+        width: 100%; /* Las columnas ocupan el 100% del ancho */
+        margin-bottom: 20px; /* Añadir separación entre las columnas */
+    }
+}
+
+/* Para pantallas más pequeñas como smartphones */
+@media (max-width: 768px) {
+    .exp_left_column,
+    .exp_right_column {
+        width: 100%; /* Las columnas ocupan el 100% del ancho */
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 15px; /* Reducir padding para pantallas pequeñas */
+    }
+}
+
+/* Para pantallas muy pequeñas (smartphones en orientación vertical) */
+@media (max-width: 480px) {
+    .exp_left_column,
+    .exp_right_column {
+        width: 100%; /* Las columnas siguen ocupando el 100% del ancho */
+        padding: 10px; /* Mantener el padding adecuado */
+    }
+
+    #Experiencia {
+        padding: 15px; /* Reducir el padding del contenedor de la experiencia */
+    }
+}
 
 
 
