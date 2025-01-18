@@ -163,8 +163,8 @@
   .color-preview-1 {
     background-color: rgba(0, 0, 0, 0.5);
   }
-  /* From Uiverse.io by it12uw */ 
-.radio {
+
+  .radio {
     background: #454857;
     padding: 4px;
     border-radius: 3px;
@@ -287,4 +287,4 @@
       transform: scale3d(1, 1, 1);
     }
   }
-  
+

@@ -25,7 +25,7 @@
 }
 
 /* Boton Whatsapp */
-.Btn {
+.btn_whatsapp {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -67,25 +67,80 @@
     transition-duration: 0.3s;
   }
   
-  .Btn:hover {
+  .btn_whatsapp:hover {
     width: 150px;
     border-radius: 40px;
     transition-duration: 0.3s;
   }
   
-  .Btn:hover .sign {
+  .btn_whatsapp:hover .sign {
     width: 30%;
     transition-duration: 0.3s;
     padding-left: 10px;
   }
   
-  .Btn:hover .text {
+  .btn_whatsapp:hover .text {
     opacity: 1;
     width: 70%;
     transition-duration: 0.3s;
     padding-right: 10px;
   }
-  .Btn:active {
+  .btn_whatsapp:active {
     transform: translate(2px, 2px);
+  }
+  
+  #btn_git{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Btn_github {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+  }
+  
+  .svgIcon {
+    transition-duration: .3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+  }
+  
+  .Btn_github:hover {
+    width: 110px;
+    transition-duration: .4s;
+    border-radius: 30px;
+  }
+  
+  .Btn_github:hover .text {
+    opacity: 1;
+    transition-duration: .4s;
+  }
+  
+  .Btn_github:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
   }
   
