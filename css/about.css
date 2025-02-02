@@ -66,17 +66,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.tag__name::before,
-.tag__name::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 40%;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #90a955;
-}
+
 
 .tag__name::before {
   left: 7px;
